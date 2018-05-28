@@ -3,7 +3,7 @@ Submissions for EE 298 - Deep Learning course
 Documentation for the final project is shown below
 
 ## Autoencoding beyond pixels
-An implementation of [Autoencoding beyond pixels using a learned similarity metric](https://arxiv.org/pdf/1512.09300.pdf) using Keras. 
+An implementation of [Autoencoding beyond pixels using a learned similarity metric](https://arxiv.org/pdf/1512.09300.pdf) using Keras.
 John Rufino Macasaet & Martin Roy Nabus (CoE 197-Z/EE 298)
 
 ## Architecture
@@ -13,10 +13,6 @@ John Rufino Macasaet & Martin Roy Nabus (CoE 197-Z/EE 298)
 ![Decoder](https://i.imgur.com/TD3yVEo.png)
 ### Discriminator
 ![Discriminator](https://i.imgur.com/GF9GiVF.png)
-### Generator Model
-![Generator](https://i.imgur.com/L0SnRCm.png)
-### Encoder and Decoder Trainer (VAE)
-![Encoder and Decoder Trainer (VAE)](https://i.imgur.com/zjtVQvQ.png)
 
 ## Dataset
 The dataset used for the training was the cropped and aligned version of the [Celeb-A Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html). The dataset features 202,599 images with 10,177 unique identities and annotations for 5 landmark locations and 40 binary attributes per image.
