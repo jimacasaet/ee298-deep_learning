@@ -47,8 +47,23 @@ python3 vae_gan.py generate
 ```
 
 ## Results
+Following the recommendations of the paper regarding the architecture of the encoder, decoder/generator, and discriminator, some of the images obtained from the trained models are shown below.
+### Results of the VAE (encoder+decoder models)
 
+### Results of the GAN (decoder+discriminator models)
 
+Unfortunately, the combined model did not generate face images. Regardless, a copy of the code can be found in the folder `vae_gan_original` for your perusal.
+To address the non-functionality of the combined model, the discriminator was modified:
+1. LeakyReLU was used instead of ReLU, and Dropout was added
+2. This modified discriminator uses Conv-LeakyReLU-DOut-BNorm instead of Conv-BNorm-ReLU
+3. The Lth layer was entirely removed from the model; instead of relying from the Lth layer information to train the encoder and decoder, the actual image info was used instead.
+
+### Results of the modified VAE-GAN
+
+### Results of the modified Conditional VAE-GAN
+
+### Results of the modified Query-to-image VAE-GAN
 ## Recommendations and Pitfalls
-1. While training on the deep learning machines provided, we noticed that the machines were not configured to use `tensorflow-gpu` (i.e. it cannot access NVIDIA cuDNN).
-2. 
+1. While training on the deep learning machines provided, we noticed that the machines were not configured to use `tensorflow-gpu` (i.e. it cannot access NVIDIA cuDNN). This hampered our capability to perform more tests.
+2. Some configurations in the model's architecture were not mentioned on the paper; one of the most crucial examples is how the encoder's reparameterization network is defined. This may have been one of the reasons why our original implementation did not work.
+3. Using LeakyReLU seems to be more effective than using plain ReLU, as shown by the results in our experiments and in other groups' experiments.
