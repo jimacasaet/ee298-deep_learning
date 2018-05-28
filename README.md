@@ -65,13 +65,13 @@ An image of the modified discriminator is shown below.
 Using the modified discriminator, three models were created: a VAE-GAN, a Conditional VAE-GAN based on the attribute vectors on `list_attr_celeba.txt`, and a query-to-image VAE-GAN that accepts an attribute vector and outputs an image corresponding to that vector.
 
 ### Results of the modified VAE-GAN
-![VAE-GAN results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/results_vaegan.jpg)
+![VAE-GAN results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/results_vaegan.png)
 
 ### Results of the modified Conditional VAE-GAN
 ![CVG results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/results_cvg.jpg)
 
 ### Results of the modified Query-to-image VAE-GAN
-![QVG results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/results_qvg.jpg)
+![QVG results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/results_qvg.png)
 
 ## Recommendations and Pitfalls
 1. While training on the deep learning machines provided, we noticed that the machines were not configured to use `tensorflow-gpu` (i.e. it cannot access NVIDIA cuDNN). This hampered our capability to perform more tests.
