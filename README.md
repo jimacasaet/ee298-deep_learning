@@ -47,7 +47,7 @@ For this case, only the corresponding decoder weights file is needed.
 ## Results
 Following the recommendations of the paper regarding the architecture of the encoder, decoder/generator, and discriminator, some of the images obtained from the trained models are shown below.
 ### Results of the VAE (encoder+decoder models)
-
+![VAE results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/pics/results_vae.jpg)
 
 ### Results of the GAN (decoder+discriminator models)
 Unfortunately, the models following the recommended GAN architecture did not yield face images. While models with a few epochs of training did show varying generated images, models with extended training (2000+ epochs) eventually ended up generating a single image over and over again. The code for training the model is in the folder `gan_cnn`, alongside two saved models. To test the generated models, run `gan_test.py name_of_model`; replace `name_of_model` with whichever model you wish to use to generate images.
