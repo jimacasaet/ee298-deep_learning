@@ -1,7 +1,7 @@
 # ee298-deep_learning
 Submissions for EE 298 - Deep Learning course
 
-Documentation for the final project is shown below
+Documentation for the final project is written below.
 
 ## Autoencoding beyond pixels
 An implementation of [Autoencoding beyond pixels using a learned similarity metric](https://arxiv.org/pdf/1512.09300.pdf) using Keras.
