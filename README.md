@@ -1,5 +1,6 @@
 # ee298-deep_learning
 Submissions for EE 298 - Deep Learning course
+
 Documentation for the final project is shown below
 
 ## Autoencoding beyond pixels
@@ -12,7 +13,7 @@ John Rufino Macasaet & Martin Roy Nabus (CoE 197-Z/EE 298)
 ### Decoder
 ![Decoder](https://i.imgur.com/TD3yVEo.png)
 ### Discriminator
-![Discriminator](https://i.imgur.com/GF9GiVF.png)
+![Discriminator](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/pics/vae_gan_disc_orig.png)
 
 ## Dataset
 The dataset used for the training was the cropped and aligned version of the [Celeb-A Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html). The dataset features 202,599 images with 10,177 unique identities and annotations for 5 landmark locations and 40 binary attributes per image.
