@@ -1,1 +1,1 @@
-Contains codes for modified VAE-GAN.
+Contains codes for the modified VAE-GANs
