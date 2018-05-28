@@ -59,11 +59,20 @@ To address the non-functionality of the combined model, the discriminator was mo
 2. This modified discriminator uses Conv-LeakyReLU-Dropout-BNorm instead of Conv-BNorm-ReLU
 3. The Lth layer was entirely removed from the model; instead of relying from the Lth layer information to train the encoder and decoder, the actual image info was used instead.
 
+An image of the modified discriminator is shown below.
+![Modified Discriminator](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/vae_gan_discriminator.png)
+
+Using the modified discriminator, three models were created: a VAE-GAN, a Conditional VAE-GAN based on the attribute vectors on `list_attr_celeba.txt`, and a query-to-image VAE-GAN that accepts an attribute vector and outputs an image corresponding to that vector.
+
 ### Results of the modified VAE-GAN
+![VAE-GAN results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/results_vaegan.jpg)
 
 ### Results of the modified Conditional VAE-GAN
+![CVG results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/results_cvg.jpg)
 
 ### Results of the modified Query-to-image VAE-GAN
+![QVG results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/results_qvg.jpg)
+
 ## Recommendations and Pitfalls
 1. While training on the deep learning machines provided, we noticed that the machines were not configured to use `tensorflow-gpu` (i.e. it cannot access NVIDIA cuDNN). This hampered our capability to perform more tests.
 2. Some configurations in the model's architecture were not mentioned on the paper; one of the most crucial examples is how the encoder's reparameterization network is defined. This may have affected our original implementation.
