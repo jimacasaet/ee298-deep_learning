@@ -62,16 +62,19 @@ To address the non-functionality of the combined model, the discriminator was mo
 An image of the modified discriminator is shown below.
 ![Modified Discriminator](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/vae_gan_discriminator.png)
 
-Using the modified discriminator, three models were created: a VAE-GAN, a Conditional VAE-GAN based on the attribute vectors on `list_attr_celeba.txt`, and a query-to-image VAE-GAN that accepts an attribute vector and outputs an image corresponding to that vector.
+Using the modified discriminator, three models were created: a VAE-GAN, a Conditional VAE-GAN based on the attribute vectors on `list_attr_celeba.txt`, and a query-to-image VAE-GAN that accepts an attribute vector and outputs an image corresponding to that vector. Take note that for codes that use attribute vector data, `list_attr_celeba.txt` should be in the same directory as the `img` folder (not inside it).
 
 ### Results of the modified VAE-GAN
 ![VAE-GAN results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/results_vaegan.png)
 
 ### Results of the modified Conditional VAE-GAN
+The images below are results of slightly altering the images' corresponding attribute vectors; for example, under the "Bald" category, Bald is set to 1 while all other hair attributes are set to -1.
 ![CVG results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/results_cvg.jpg)
 
 ### Results of the modified Query-to-image VAE-GAN
 ![QVG results](https://raw.githubusercontent.com/mrnabus/ee298-deep_learning/master/pics/results_qvg.png)
+
+Overall, the results were not as good as hoped, but it is evident that some features still carry over the reconstructions; this can also be seen with the
 
 ## Recommendations and Pitfalls
 1. While training on the deep learning machines provided, we noticed that the machines were not configured to use `tensorflow-gpu` (i.e. it cannot access NVIDIA cuDNN). This hampered our capability to perform more tests.
